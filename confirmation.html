@@ -4,21 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>אישור הזמנה</title>
-    <link rel="stylesheet" href="styles.css"> <!-- חיבור ל-CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .confirmation-container {
+            background-color: #333;
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 400px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .confirmation-container h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .confirmation-container p {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .confirmation-container .order-details {
+            background-color: #444;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .confirmation-container .order-details p {
+            color: #ccc;
+            margin: 5px 0;
+        }
+
+        .confirmation-container button {
+            background-color: #f4b41a;
+            border: none;
+            padding: 10px 20px;
+            color: #333;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .confirmation-container button:hover {
+            background-color: #e6a100;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>תודה על ההזמנה!</h1>
-    </header>
-    <main>
-        <div class="confirmation-message">
-            <p>ההזמנה שלך התקבלה בהצלחה. תודה שפנית ל-IDO Washing!</p>
-            <p>אנו ניצור עמך קשר בהקדם לאישור סופי.</p>
-            <a href="index.html" class="btn">חזור לדף הבית</a> <!-- כפתור חזרה לדף הבית -->
+    <div class="confirmation-container">
+        <h1>ההזמנה התקבלה בהצלחה!</h1>
+        <p>תודה שבחרת ב-IDO Washing לשטיפת הרכב שלך.</p>
+        <div class="order-details">
+            <p><strong>שם מלא:</strong> עומרי כהן</p>
+            <p><strong>טלפון:</strong> 052-1234567</p>
+            <p><strong>מיקום השטיפה:</strong> בית הלקוח</p>
+            <p><strong>סוג השטיפה:</strong> שטיפת חוץ ופנים</p>
+            <p><strong>תאריך:</strong> 22/09/2024</p>
+            <p><strong>שעה:</strong> 10:15</p>
         </div>
-    </main>
-    <footer>
-        <p>&copy; 2024 IDO Washing. כל הזכויות שמורות.</p>
-    </footer>
+        <button onclick="window.location.href='index.html'">חזרה לדף הבית</button>
+    </div>
 </body>
 </html>
