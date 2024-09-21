@@ -86,24 +86,6 @@
         </div>
         <button onclick="window.location.href='index.html'">חזרה לדף הבית</button>
     </div>
-
-    <!-- JavaScript להצגת הפרטים הדינמיים מתוך Local Storage -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
-
-            if (lastOrder) {
-                document.getElementById('fullName').textContent = lastOrder.fullName;
-                document.getElementById('phone').textContent = lastOrder.phone;
-                document.getElementById('location').textContent = lastOrder.location;
-                document.getElementById('washType').textContent = lastOrder.washType;
-                document.getElementById('date').textContent = lastOrder.date;
-                document.getElementById('time').textContent = lastOrder.time;
-            } else {
-                // במקרה ואין הזמנה אחרונה ב-Local Storage
-                document.querySelector('.confirmation-container').innerHTML = "<p>לא נמצאה הזמנה להצגה.</p>";
-            }
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
