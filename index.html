@@ -1,18 +1,11 @@
 <!DOCTYPE html>
 <html lang="he">
 <head>
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IDO Washing</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- EmailJS Library -->
-    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function(){
-            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
-        })();
-    </script>
 </head>
 <body>
     <!-- Header Section -->
@@ -33,7 +26,7 @@
     </header>
 
     <!-- Hero Section with Background Image -->
-    <section id="home" class="hero" style="background-image: url('pexels-photo-3616650.jpeg');"> <!-- Background image -->
+    <section id="home" class="hero" style="background-image: url('pexels-photo-3616650.jpeg');">
         <div class="hero-text">
             <h2 class="kinetic-text">IDO Washing - חווית שטיפה ברמה אחרת!</h2>
             <a href="#booking" class="btn">הזמן שירות עכשיו</a>
@@ -161,27 +154,22 @@
                 return;
             }
 
-            // Prepare data for EmailJS
+            // הכנת הנתונים ושמירתם ב-Local Storage
             const bookingData = {
                 fullName: fullName,
                 phone: phone,
                 location: location === 'home' ? 'בית הלקוח' : 'בית העסק',
                 washType: washType,
                 date: date,
-                time: time,
+                time: time
             };
 
-            // Send email via EmailJS
-            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", bookingData)
-            .then(function(response) {
-                console.log("ההזמנה נשלחה בהצלחה!", response.status, response.text);
-                
-                // Redirect the customer to the confirmation page after successful email
-                window.location.href = "confirmation.html"; // Replace with your confirmation page URL
-            }, function(error) {
-                console.log("שגיאה בשליחת ההזמנה:", error);
-                alert("אירעה שגיאה. נסה שוב מאוחר יותר.");
-            });
+            let orders = JSON.parse(localStorage.getItem('orders')) || [];
+            orders.push(bookingData);
+            localStorage.setItem('orders', JSON.stringify(orders));
+
+            // Redirect the customer to the confirmation page after successful order
+            window.location.href = "confirmation.html";
         });
     </script>
 </body>
