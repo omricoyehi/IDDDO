@@ -21,7 +21,7 @@ document.getElementById('booking-form').addEventListener('submit', function(even
         return;
     }
 
-    // הכנת הנתונים לשליחה ושמירתם ב-Local Storage
+    // הכנת הנתונים ושליחתם ל-Local Storage
     const bookingData = {
         fullName: fullName,
         phone: phone,
@@ -31,39 +31,33 @@ document.getElementById('booking-form').addEventListener('submit', function(even
         time: time
     };
 
+    // שמירת ההזמנה ב-Local Storage
     let orders = JSON.parse(localStorage.getItem('orders')) || [];
     orders.push(bookingData);
     localStorage.setItem('orders', JSON.stringify(orders));
+
+    // שמירת ההזמנה האחרונה עבור עמוד האישור
+    localStorage.setItem('lastOrder', JSON.stringify(bookingData));
 
     // הפניה לעמוד אישור
     window.location.href = "confirmation.html";
 });
 
-// פונקציה להצגת ההזמנות בעמוד ההזמנות
-function displayOrders() {
-    const ordersList = document.getElementById('orders-list');
-    let orders = JSON.parse(localStorage.getItem('orders')) || [];
+// פונקציה להצגת ההזמנה האחרונה בעמוד האישור
+function displayLastOrder() {
+    const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
 
-    if (orders.length === 0) {
-        ordersList.innerHTML = "<p>אין הזמנות להצגה.</p>";
-    } else {
-        orders.forEach(order => {
-            const orderItem = document.createElement('div');
-            orderItem.className = 'order-item';
-            orderItem.innerHTML = `
-                <h2>הזמנה של: ${order.fullName}</h2>
-                <p>טלפון: ${order.phone}</p>
-                <p>מיקום השטיפה: ${order.location}</p>
-                <p>סוג השטיפה: ${order.washType}</p>
-                <p>תאריך: ${order.date}</p>
-                <p>שעה: ${order.time}</p>
-            `;
-            ordersList.appendChild(orderItem);
-        });
+    if (lastOrder) {
+        document.getElementById('fullName').textContent = lastOrder.fullName;
+        document.getElementById('phone').textContent = lastOrder.phone;
+        document.getElementById('location').textContent = lastOrder.location;
+        document.getElementById('washType').textContent = lastOrder.washType;
+        document.getElementById('date').textContent = lastOrder.date;
+        document.getElementById('time').textContent = lastOrder.time;
     }
 }
 
-// קריאה לפונקציה להצגת ההזמנות בעמוד ההזמנות
-if (window.location.pathname.includes('orders.html')) {
-    window.onload = displayOrders;
+// קריאה לפונקציה להצגת ההזמנה בעמוד האישור
+if (window.location.pathname.includes('confirmation.html')) {
+    window.onload = displayLastOrder;
 }
