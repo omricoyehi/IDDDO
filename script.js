@@ -32,7 +32,7 @@ document.getElementById('booking-form').addEventListener('submit', function(even
     };
 
     // שליחת הטופס באמצעות EmailJS
-    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", bookingData)
+    emailjs.send("service_e46zy8c", "template_o0i7dau", bookingData)
     .then(function(response) {
         console.log("ההזמנה נשלחה בהצלחה!", response.status, response.text);
         
@@ -46,5 +46,5 @@ document.getElementById('booking-form').addEventListener('submit', function(even
 
 // פונקציה לאתחול EmailJS (כדי שתוכל להשתמש בזה עם ID ייחודי שלך)
 (function(){
-    emailjs.init("YOUR_USER_ID"); // החלף את YOUR_USER_ID במזהה EmailJS שלך
+    emailjs.init("3HgUH6DT0V1iMahFQ"); // ה-Public Key שלך
 })();
