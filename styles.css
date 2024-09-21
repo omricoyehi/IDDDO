@@ -1,263 +1,219 @@
-/* General styling */
+/* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f6f9; /* Elegant white background */
-    color: #003366; /* Dark blue text color */
+    background-color: #f4f4f4;
+    direction: rtl;
+}
+
+h2 {
     text-align: center;
+    color: #333;
 }
 
 header {
-    background-color: #003366; /* Dark blue background */
-    color: #ffffff;
-    padding: 1rem 0;
-    border-bottom: 3px solid #ffffff;
+    background-color: #333;
+    padding: 20px 0;
 }
 
 header .logo img {
+    display: block;
+    margin: 0 auto;
     width: 150px;
 }
 
 nav ul {
     list-style: none;
+    text-align: center;
     padding: 0;
 }
 
 nav ul li {
-    display: inline-block;
+    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-.btn {
-    background-color: #00cc99; /* Green background */
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+nav ul li a:hover {
+    color: #f4f4f4;
 }
 
-.btn:hover {
-    background-color: #009977; /* Darker green on hover */
-}
-
-/* Hero Section with Fullscreen Background Image */
 .hero {
-    background-image: url('images/pexels-photo-3616650.jpeg'); /* Use the new hero background image */
     background-size: cover;
     background-position: center;
-    padding: 200px 0;
-    position: relative;
-}
-
-.hero-text {
-    color: #ffffff;
+    padding: 100px 0;
+    color: white;
     text-align: center;
-    position: relative;
-    z-index: 2;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 51, 102, 0.5); /* Dark overlay on the image */
-    z-index: 1;
+.hero h2 {
+    font-size: 2.5rem;
 }
 
-/* Grid Layout for Services */
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-.service-box {
-    background-color: #e6f2ff; /* Light blue background */
-    padding: 20px;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.service-box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 10px rgba(0, 0, 51, 0.2);
-}
-
-.service-box img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-/* Pricing Table */
-.pricing table {
-    width: 80%;
-    margin: 0 auto;
-    border-collapse: collapse;
-}
-
-.pricing th, .pricing td {
-    padding: 10px;
-    border: 1px solid #003366;
-    text-align: right; /* Align the service text on the right */
-}
-
-.pricing th {
-    background-color: #003366;
-    color: #ffffff;
-    text-align: left; /* Align the price text on the left */
-}
-
-.pricing td {
-    background-color: #e6f2ff;
-    color: #003366;
-}
-
-.pricing td:nth-child(2) {
-    text-align: left; /* Align prices on the left */
-}
-
-/* Gallery Styling */
-.gallery-images {
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    padding: 20px;
-}
-
-.gallery-images img {
-    width: 100%; /* Make images take up the full width of their container */
-    max-width: 300px; /* Ensure a max-width for consistency */
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.gallery-images img:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(0, 0, 51, 0.3);
-}
-
-/* Testimonials Section */
-.testimonials {
-    background-color: #f4f6f9;
-    padding: 40px 0;
-}
-
-.testimonials h2 {
-    color: #003366;
-    margin-bottom: 30px;
-}
-
-.testimonial-box {
-    background-color: #e6f2ff; /* Light blue background */
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 10px rgba(0, 0, 51, 0.1);
-}
-
-.testimonial-box p {
-    color: #003366;
-}
-
-.testimonial-box p:nth-child(2) {
-    font-style: italic;
-    text-align: right;
-}
-
-/* Booking Form Styling */
-.booking {
-    background-color: #e6f2ff; /* Light blue background */
-    padding: 50px;
-    border-radius: 10px;
-    margin: 20px auto;
-    max-width: 600px;
-}
-
-.booking h2 {
-    color: #003366; /* Dark blue text color */
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-label {
-    font-size: 1rem;
-    color: #003366;
-    text-align: right;
-}
-
-input, select {
-    padding: 10px;
-    border: 1px solid #003366;
+.hero a.btn {
+    background-color: #f4b41a;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
     border-radius: 5px;
+}
+
+.hero a.btn:hover {
+    background-color: #e6a100;
+}
+
+/* Services and Pricing Grid */
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.service-box, .price-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.service-box img, .price-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.service-box h3, .price-box h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.service-box p, .price-box p {
+    color: #666;
     font-size: 1rem;
 }
 
-button {
-    background-color: #00cc99;
+.service-box a.btn, .price-box a.btn {
+    display: inline-block;
+    background-color: #f4b41a;
     color: white;
     padding: 10px 20px;
-    border: none;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    cursor: pointer;
-    transition: background-color 0.3s;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
 }
 
-button:hover {
-    background-color: #009977;
+.service-box a.btn:hover, .price-box a.btn:hover {
+    background-color: #e6a100;
+}
+
+.service-box:hover, .price-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Pricing Section */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 50px 20px;
+}
+
+.price-box {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    width: 250px;
+}
+
+.price-box h3 {
+    font-size: 1.5rem;
+    color: #f4b41a;
+}
+
+.price-box p {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.price-box:hover {
+    transform: scale(1.05);
+}
+
+/* Booking Form */
+.booking {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.booking form {
+    display: inline-block;
+    text-align: right;
+}
+
+.booking label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.booking input, .booking select {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.booking button.btn {
+    background-color: #f4b41a;
+    padding: 10px 20px;
+    color: white;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.booking button.btn:hover {
+    background-color: #e6a100;
 }
 
 /* Contact Section */
+.contact {
+    background-color: #333;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
 .contact p {
-    font-size: 1.2rem;
-    color: #003366;
-    margin: 5px;
+    font-size: 1.1rem;
 }
 
 /* Footer */
 footer {
-    background-color: #003366;
-    color: #ffffff;
-    padding: 10px 0;
-    width: 100%;
-    position: relative;
-    bottom: 0;
-}
-
-/* Responsive Design for Mobile */
-@media (max-width: 768px) {
-    .gallery-images {
-        flex-direction: column;
-    }
-
-    .service-box, .testimonial-box, .booking {
-        width: 90%;
-        margin: 10px auto;
-    }
-
-    .pricing table {
-        width: 100%;
-    }
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
 }
