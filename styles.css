@@ -12,61 +12,19 @@ h2 {
     color: #333;
 }
 
-header {
-    background-color: #333;
-    padding: 20px 0;
+/* Center the "Testimonials" Section */
+.testimonials {
+    text-align: center; /* מרכז את כל התוכן */
+    padding: 50px 20px;
 }
 
-header .logo img {
-    display: block;
-    margin: 0 auto;
-    width: 150px;
-}
-
-nav ul {
-    list-style: none;
-    text-align: center;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #f4f4f4;
-}
-
-.hero {
-    background-size: cover;
-    background-position: center;
-    padding: 100px 0;
-    color: white;
-    text-align: center;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-}
-
-.hero a.btn {
-    background-color: #f4b41a;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-    font-size: 1.2rem;
-    border-radius: 5px;
-}
-
-.hero a.btn:hover {
-    background-color: #e6a100;
+.testimonial-box {
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+    color: #333;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto; /* מרכז את הקופסה */
 }
 
 /* Services and Pricing Grid */
@@ -155,65 +113,4 @@ nav ul li a:hover {
 
 .price-box:hover {
     transform: scale(1.05);
-}
-
-/* Booking Form */
-.booking {
-    background-color: #f9f9f9;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.booking form {
-    display: inline-block;
-    text-align: right;
-}
-
-.booking label {
-    display: block;
-    margin-bottom: 10px;
-    font-weight: bold;
-}
-
-.booking input, .booking select {
-    width: 300px;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    font-size: 1rem;
-}
-
-.booking button.btn {
-    background-color: #f4b41a;
-    padding: 10px 20px;
-    color: white;
-    font-size: 1.2rem;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.booking button.btn:hover {
-    background-color: #e6a100;
-}
-
-/* Contact Section */
-.contact {
-    background-color: #333;
-    color: white;
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.contact p {
-    font-size: 1.1rem;
-}
-
-/* Footer */
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 20px;
 }
