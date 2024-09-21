@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IDO Washing</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- EmailJS Library -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace with your EmailJS User ID
+        })();
+    </script>
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">
+            <img src="images/Logo.jpg" alt="IDO Washing Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">בית</a></li>
+                <li><a href="#services">שירותים</a></li>
+                <li><a href="#pricing">מחירים</a></li>
+                <li><a href="#gallery">גלריה</a></li>
+                <li><a href="#testimonials">ביקורות</a></li>
+                <li><a href="#contact">צור קשר</a></li>
+                <li><a href="#booking" class="btn">הזמן עכשיו</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section id="home" class="hero" style="background-image: url('images/pexels-photo-3616650.jpeg');"> <!-- Background image -->
+        <div class="hero-text">
+            <h2 class="kinetic-text">IDO Washing - חווית שטיפה ברמה אחרת!</h2>
+            <a href="#booking" class="btn">הזמן שירות עכשיו</a>
+        </div>
+    </section>
+
+    <!-- Services Section with Images -->
+    <section id="services" class="services">
+        <h2>השירותים שלנו</h2>
+        <div class="grid">
+            <div class="service-box">
+                <img src="images/brown.jpg" alt="שטיפת חוץ"> <!-- Image 1 -->
+                <h3>שטיפת חוץ</h3>
+                <p>ניקוי חיצוני יסודי לרכב שלך, כולל ג'נטים, מראות, וחלונות.</p>
+            </div>
+            <div class="service-box">
+                <img src="images/old sc.jpg" alt="פוליש ווקס"> <!-- Image 2 -->
+                <h3>פוליש ווקס</h3>
+                <p>הברקה מקצועית לפח הרכב ושמירה על שכבת הגנה.</p>
+            </div>
+            <div class="service-box">
+                <img src="images/pexels-photo-3616650.jpeg" alt="שטיפת מנוע"> <!-- Image 3 -->
+                <h3>שטיפת מנוע</h3>
+                <p>ניקוי יסודי של מנוע הרכב כדי לשמור על ביצועים מקסימליים.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <h2>מחירים</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>שירות</th>
+                    <th>מחיר</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>שטיפת חוץ</td>
+                    <td>50 ₪</td>
+                </tr>
+                <tr>
+                    <td>פוליש ווקס</td>
+                    <td>200 ₪</td>
+                </tr>
+                <tr>
+                    <td>שטיפת מנוע</td>
+                    <td>100 ₪</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Gallery Section with Images -->
+    <section id="gallery" class="gallery">
+        <h2>גלריה</h2>
+        <div class="gallery-images">
+            <a href="images/brown.jpg" data-lightbox="gallery">
+                <img src="images/brown.jpg" alt="Before and After Car Wash 1">
+            </a>
+            <a href="images/old sc.jpg" data-lightbox="gallery">
+                <img src="images/old sc.jpg" alt="Before and After Car Wash 2">
+            </a>
+            <a href="images/pexels-photo-3616650.jpeg" data-lightbox="gallery">
+                <img src="images/pexels-photo-3616650.jpeg" alt="Before and After Car Wash 3">
+            </a>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <h2>מה הלקוחות אומרים</h2>
+        <div class="testimonial-box">
+            <p>״שירות מעולה! הרכב שלי מעולם לא נראה כל כך טוב אחרי פוליש ווקס. מומלץ בחום!״</p>
+            <p>- אבי לוי</p>
+        </div>
+        <div class="testimonial-box">
+            <p>״שטיפת מנוע מקצועית ואיכותית, הם הגיעו עד הבית ונתנו שירות מעולה.״</p>
+            <p>- מיכל כהן</p>
+        </div>
+        <div class="testimonial-box">
+            <p>״תהליך ההזמנה פשוט וקל, שירות מהיר ומקצועי, אני ממליץ בחום על IDO Washing.״</p>
+            <p>- יוסי גולדשטיין</p>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking">
+        <h2>הזמן שירות</h2>
+        <form id="booking-form">
+            <label for="full-name">שם מלא:</label>
+            <input type="text" id="full-name" name="full-name" required placeholder="הכנס שם מלא">
+
+            <label for="phone">טלפון סלולרי:</label>
+            <input type="tel" id="phone" name="phone" required placeholder="הכנס מספר סלולרי">
+
+            <label for="location">מיקום השטיפה:</label>
+            <select id="location" name="location" required>
+                <option value="home">בית הלקוח</option>
+                <option value="business">בית העסק</option>
+            </select>
+
+            <label for="wash-type">סוג השטיפה:</label>
+            <select id="wash-type" name="wash-type" required>
+                <option value="engine">שטיפת מנוע</option>
+                <option value="exterior-interior">שטיפת חוץ ופנים</option>
+                <option value="polish">פוליש ווקס</option>
+            </select>
+
+            <label for="date">תאריך:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="time">שעה:</label>
+            <input type="time" id="time" name="time" required>
+
+            <button type="submit" class="btn">אישור הזמנה</button>
+        </form>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>צור קשר</h2>
+        <p>כתובת:  הנוטר 41 א' חיפה</p>
+        <p>טלפון: 050-7238115</p>
+        <p>idowashing@gmail.com :אימייל </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 IDO Washing. כל הזכויות שמורות.</p>
+    </footer>
+
+    <!-- EmailJS Form Submission Script -->
+    <script>
+        document.getElementById('booking-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Collect values from the form fields
+            const fullName = document.getElementById('full-name').value;
+            const phone = document.getElementById('phone').value;
+            const location = document.getElementById('location').value;
+            const washType = document.getElementById('wash-type').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            // Check if all fields are filled
+            if (!fullName || !phone || !location || !washType || !date || !time) {
+                alert("אנא מלא את כל השדות לפני שליחת ההזמנה.");
+                return;
+            }
+
+            // Prepare data for EmailJS
+            const bookingData = {
+                fullName: fullName,
+                phone: phone,
+                location: location === 'home' ? 'בית הלקוח' : 'בית העסק',
+                washType: washType,
+                date: date,
+                time: time,
+            };
+
+            // Send email via EmailJS
+            emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", bookingData)
+            .then(function(response) {
+                console.log("ההזמנה נשלחה בהצלחה!", response.status, response.text);
+                
+                // Redirect the customer to the confirmation page after successful email
+                window.location.href = "confirmation.html"; // Replace with your confirmation page URL
+            }, function(error) {
+                console.log("שגיאה בשליחת ההזמנה:", error);
+                alert("אירעה שגיאה. נסה שוב מאוחר יותר.");
+            });
+        });
+    </script>
+</body>
+</html>
