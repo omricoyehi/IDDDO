@@ -77,14 +77,33 @@
         <h1>ההזמנה התקבלה בהצלחה!</h1>
         <p>תודה שבחרת ב-IDO Washing לשטיפת הרכב שלך.</p>
         <div class="order-details">
-            <p><strong>שם מלא:</strong> עומרי כהן</p>
-            <p><strong>טלפון:</strong> 052-1234567</p>
-            <p><strong>מיקום השטיפה:</strong> בית הלקוח</p>
-            <p><strong>סוג השטיפה:</strong> שטיפת חוץ ופנים</p>
-            <p><strong>תאריך:</strong> 22/09/2024</p>
-            <p><strong>שעה:</strong> 10:15</p>
+            <p><strong>שם מלא:</strong> <span id="fullName"></span></p>
+            <p><strong>טלפון:</strong> <span id="phone"></span></p>
+            <p><strong>מיקום השטיפה:</strong> <span id="location"></span></p>
+            <p><strong>סוג השטיפה:</strong> <span id="washType"></span></p>
+            <p><strong>תאריך:</strong> <span id="date"></span></p>
+            <p><strong>שעה:</strong> <span id="time"></span></p>
         </div>
         <button onclick="window.location.href='index.html'">חזרה לדף הבית</button>
     </div>
+
+    <!-- JavaScript להצגת הפרטים הדינמיים מתוך Local Storage -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const lastOrder = JSON.parse(localStorage.getItem('lastOrder'));
+
+            if (lastOrder) {
+                document.getElementById('fullName').textContent = lastOrder.fullName;
+                document.getElementById('phone').textContent = lastOrder.phone;
+                document.getElementById('location').textContent = lastOrder.location;
+                document.getElementById('washType').textContent = lastOrder.washType;
+                document.getElementById('date').textContent = lastOrder.date;
+                document.getElementById('time').textContent = lastOrder.time;
+            } else {
+                // במקרה ואין הזמנה אחרונה ב-Local Storage
+                document.querySelector('.confirmation-container').innerHTML = "<p>לא נמצאה הזמנה להצגה.</p>";
+            }
+        });
+    </script>
 </body>
 </html>
