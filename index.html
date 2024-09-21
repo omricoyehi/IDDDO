@@ -23,8 +23,7 @@
             <ul>
                 <li><a href="#home">בית</a></li>
                 <li><a href="#services">שירותים</a></li>
-                <li><a href="#pricing">מחירים</a></li>
-                <li><a href="#gallery">גלריה</a></li>
+                <li><a href="#pricing">הצעות שירות</a></li>
                 <li><a href="#testimonials">ביקורות</a></li>
                 <li><a href="#contact">צור קשר</a></li>
                 <li><a href="#booking" class="btn">הזמן עכשיו</a></li>
@@ -40,68 +39,40 @@
         </div>
     </section>
 
-    <!-- Services Section with Images -->
+    <!-- Services Section with Images and Descriptions (Updated) -->
     <section id="services" class="services">
         <h2>השירותים שלנו</h2>
         <div class="grid">
+            <!-- Service 1: שטיפה בבית הלקוח -->
             <div class="service-box">
-                <img src="brown.jpg" alt="שטיפת חוץ"> <!-- Image 1 -->
-                <h3>שטיפת חוץ</h3>
-                <p>ניקוי חיצוני יסודי לרכב שלך, כולל ג'נטים, מראות, וחלונות.</p>
+                <img src="52.jpeg" alt="שטיפה בבית הלקוח">
+                <h3>שטיפה פנימית/חיצונית בבית הלקוח</h3>
+                <p>ניקוי יסודי בבית הלקוח כולל שאיבת מושבים, ניקוי חלונות והברקה חיצונית. נוחות מרבית ושירות אישי עד פתח הבית.</p>
+                <a href="#booking" class="btn" onclick="scrollToBooking()">הזמן עכשיו</a>
             </div>
+            
+            <!-- Service 2: שטיפה בבית העסק -->
             <div class="service-box">
-                <img src="old sc.jpg" alt="פוליש ווקס"> <!-- Image 2 -->
-                <h3>פוליש ווקס</h3>
-                <p>הברקה מקצועית לפח הרכב ושמירה על שכבת הגנה.</p>
-            </div>
-            <div class="service-box">
-                <img src="pexels-photo-3616650.jpeg" alt="שטיפת מנוע"> <!-- Image 3 -->
-                <h3>שטיפת מנוע</h3>
-                <p>ניקוי יסודי של מנוע הרכב כדי לשמור על ביצועים מקסימליים.</p>
+                <img src="693.jpeg" alt="שטיפה בבית העסק">
+                <h3>שטיפה פנימית/חיצונית בבית העסק</h3>
+                <p>שירות מהיר ויעיל לניקוי פנים וחוץ הרכב, מותאם לאלו שמעוניינים לנקות את הרכב בבית העסק עם כל הנוחות.</p>
+                <a href="#booking" class="btn" onclick="scrollToBooking()">הזמן עכשיו</a>
             </div>
         </div>
     </section>
 
     <!-- Pricing Section -->
     <section id="pricing" class="pricing">
-        <h2>מחירים</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>שירות</th>
-                    <th>מחיר</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>שטיפת חוץ</td>
-                    <td>50 ₪</td>
-                </tr>
-                <tr>
-                    <td>פוליש ווקס</td>
-                    <td>200 ₪</td>
-                </tr>
-                <tr>
-                    <td>שטיפת מנוע</td>
-                    <td>100 ₪</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <!-- Gallery Section with Images -->
-    <section id="gallery" class="gallery">
-        <h2>גלריה</h2>
-        <div class="gallery-images">
-            <a href="brown.jpg" data-lightbox="gallery">
-                <img src="brown.jpg" alt="Before and After Car Wash 1">
-            </a>
-            <a href="old sc.jpg" data-lightbox="gallery">
-                <img src="old sc.jpg" alt="Before and After Car Wash 2">
-            </a>
-            <a href="pexels-photo-3616650.jpeg" data-lightbox="gallery">
-                <img src="pexels-photo-3616650.jpeg" alt="Before and After Car Wash 3">
-            </a>
+        <h2>הצעות שירות</h2>
+        <div class="pricing-grid">
+            <div class="price-box" onclick="scrollToBooking()">
+                <h3>שטיפה פנימית/חיצונית בבית הלקוח</h3>
+                <p>בעלות 50 ש"ח</p>
+            </div>
+            <div class="price-box" onclick="scrollToBooking()">
+                <h3>שטיפה פנימית/חיצונית בבית העסק</h3>
+                <p>בעלות 60 ש"ח</p>
+            </div>
         </div>
     </section>
 
@@ -109,11 +80,11 @@
     <section id="testimonials" class="testimonials">
         <h2>מה הלקוחות אומרים</h2>
         <div class="testimonial-box">
-            <p>״שירות מעולה! הרכב שלי מעולם לא נראה כל כך טוב אחרי פוליש ווקס. מומלץ בחום!״</p>
+            <p>״שירות מעולה! הרכב שלי מעולם לא נראה כל כך טוב אחרי שטיפה פנימית/חיצונית. מומלץ בחום!״</p>
             <p>- אבי לוי</p>
         </div>
         <div class="testimonial-box">
-            <p>״שטיפת מנוע מקצועית ואיכותית, הם הגיעו עד הבית ונתנו שירות מעולה.״</p>
+            <p>״שטיפה מקצועית ואיכותית, הם הגיעו עד הבית ונתנו שירות מעולה.״</p>
             <p>- מיכל כהן</p>
         </div>
         <div class="testimonial-box">
@@ -140,9 +111,7 @@
 
             <label for="wash-type">סוג השטיפה:</label>
             <select id="wash-type" name="wash-type" required>
-                <option value="engine">שטיפת מנוע</option>
                 <option value="exterior-interior">שטיפת חוץ ופנים</option>
-                <option value="polish">פוליש ווקס</option>
             </select>
 
             <label for="date">תאריך:</label>
@@ -168,8 +137,12 @@
         <p>&copy; 2024 IDO Washing. כל הזכויות שמורות.</p>
     </footer>
 
-    <!-- EmailJS Form Submission Script -->
+    <!-- JavaScript -->
     <script>
+        function scrollToBooking() {
+            document.getElementById("booking").scrollIntoView({ behavior: 'smooth' });
+        }
+
         document.getElementById('booking-form').addEventListener('submit', function(event) {
             event.preventDefault();
 
